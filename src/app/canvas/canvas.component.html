@@ -1,0 +1,9 @@
+<canvas #canvas width="700" height="550"
+  (mousedown)="onMouseDown($event)"
+  (mousemove)="onMouseMove($event)"
+  (mouseup)="onMouseUp()"
+  (mouseleave)="onMouseUp()">
+</canvas>
+
+<button (click)="clearCanvas()">Limpiar Lienzo</button>
+<button (click)="downloadImage()">Descargar Dibujo</button>

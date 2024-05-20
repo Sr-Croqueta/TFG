@@ -1,0 +1,10 @@
+<div class="register" *ngIf="shouldReloadNgFor">
+    <h2>{{ modo === 'crear' ? 'Crear Anuncio' : 'Editar Anuncio' }}</h2>
+    <form (ngSubmit)="guardarAnuncio()" enctype="multipart/form-data">
+      <label for="chk" aria-hidden="true">Registrate</label>
+      <input [(ngModel)]="nombre" class="input" type="text" name="cuerpo" placeholder="Cuerpo" required="">
+      <input type="file" #archivoInput (change)="onFileSelected($event)" accept=".jpg, .jpeg, .png, .pdf, .docx" required="">
+      <button type="submit">Guardar Diseño</button>
+    </form>
+</div>
+
